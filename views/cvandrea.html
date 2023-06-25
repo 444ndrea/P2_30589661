@@ -35,48 +35,97 @@
 </head>
 <body>
     <div>
-        <img src="fotoandrea.jpeg" alt="2x2" width="120" height="120">
+        <img src="andrea22.jpeg" alt="2x3" width="120" height="120">
         <h1>Andrea Beatriz Gómez Hernández</h1>
         <p>Los Palos Grandes, 123 1060 Caracas (Distrito Capital), Venezuela</p>
-        <p>Telefono: 04127078627</p>
+        <p id="telefono">Telefono: 04127078627</p>
         <fieldset>
-            <legend>Datos Generales</legend>
+            <legend id="datosgenerales">Datos Generales</legend>
             <ul>
-                <li>Fecha de Nacimiento: 22/09/2004</li>
-                <li>Cédula: 30.589.661</li>
-                <li>Correo electrónico: abgomez.ec@gmail.com</li>
+                <li id="fechanacimiento">Fecha de Nacimiento: 22/09/2004</li>
+                <li id="cedula">Cédula: 30.589.661</li>
+                <li id="email">Correo electrónico: abgomez.ec@gmail.com</li>
                 <li><a href="https://www.instagram.com/444ndrea_/?igshid=YmMyMTA2M2Y%3D">Instagram</a> </li>
                 <li><a href="https://twitter.com/">twitter</a> </li>
             </ul>
         </fieldset>
         <fieldset>
-            <legend>Formación Académica</legend>
+            <legend id="formacion">Formación Académica</legend>
             <ul>
-                <li>Bachiller: U.E.P. Colegio "Emilio Crespo"</li>
-                <li>Ingeniería en Informática: Actualmente cursando 4to semestre en la Universidad Nacional Experimental de los Llanos Centrales "Rómulo Gallegos"</li>
+                <li id="bachiller">Bachiller: U.E.P. Colegio "Emilio Crespo"</li>
+                <li id="ingenieria">Ingeniería en Informática: Actualmente cursando 4to semestre en la Universidad Nacional Experimental de los Llanos Centrales "Rómulo Gallegos"</li>
             </ul>
         </fieldset>
         <fieldset>
-            <legend>Experiencia Laboral</legend>
+            <legend id="experiencia">Experiencia Laboral</legend>
             <ul>
-                <li>Actualmente me encuentro en la búsqueda de mi primer experiencia laboral.</li>
+                <li id="exptexto">Actualmente me encuentro en la búsqueda de mi primer experiencia laboral.</li>
             </ul>
         </fieldset>
         <fieldset>
-            <legend>Habilidades y destrezas</legend>
+            <legend id="habilidades">Habilidades y destrezas</legend>
             <ul>
-                <li>Gestión y organización</li>
-                <li>Liderazgo</li>
-                <li>Comunicación acertiva</li>
-                <li>Resolución de conflictos</li>
+                <li id="gestion">Gestión y organización</li>
+                <li id="liderazgo">Liderazgo</li>
+                <li id="comunicacion">Comunicación acertiva</li>
+                <li id="resolucion">Resolución de conflictos</li>
             </ul>
         </fieldset>
         <fieldset>
-            <legend>Objetivos e intereses</legend>
+            <legend id="objetivos">Objetivos e intereses</legend>
             <ul>
-                <li>Encontrar una empresa en la que pueda aprovechar mis habilidades personales, como la responsabilidad, versatilidad, inteligencia, y el deseo de aprender.</li>
+                <li id="textobjetivos">Encontrar una empresa en la que pueda aprovechar mis habilidades personales, como la responsabilidad, versatilidad, inteligencia, y el deseo de aprender.</li>
             </ul>
         </fieldset>
+        <button onclick="cambiartexto()" id="boton">Cambiar a Inglés</button>
     </div>
+    <script>
+        //Iniciamos la variable que usaremos como valor booleano
+        var EsEspanol = 1;
+        //Funcion para cambiar cadenas de texto a ingles
+        function cambiartexto() {
+            if(EsEspanol == 1){
+                document.getElementById("telefono").innerHTML = "Cellphone: 04127078627";
+                document.getElementById("datosgenerales").innerHTML = "General Information";
+                document.getElementById("fechanacimiento").innerHTML = "Birth date: 09/22/2004";
+                document.getElementById("cedula").innerHTML = "ID: 30.589.661";
+                document.getElementById("email").innerHTML = "Email: abgomez.ec@gmail.com";
+                document.getElementById("formacion").innerHTML = "Academic Formation";
+                document.getElementById("bachiller").innerHTML = "High School: U.E.P. Colegio ''Emilio Crespo''";
+                document.getElementById("ingenieria").innerHTML = "Engineering in Computing Science: Actually Coursing 4th semester in Universidad Nacional Experimental de los Llanos Centrales ''Rómulo Gallegos''";
+                document.getElementById("experiencia").innerHTML = "Work Experience";
+                document.getElementById("exptexto").innerHTML = "I am currently looking for my first work experience.";
+                document.getElementById("habilidades").innerHTML = "Skills and abilities";
+                document.getElementById("gestion").innerHTML = "Management and organization";
+                document.getElementById("liderazgo").innerHTML = "Leadership";
+                document.getElementById("comunicacion").innerHTML = "Successful communication";
+                document.getElementById("resolucion").innerHTML = "Conflict resolution";
+                document.getElementById("objetivos").innerHTML = "Objectives and interests";
+                document.getElementById("textobjetivos").innerHTML = "Find a company where I can take advantage of my personal skills, such as responsibility, versatility, intelligence, and the desire to learn.";
+                document.getElementById("boton").innerHTML = "Change to Spanish";
+                EsEspanol = 0;
+            }else{
+                document.getElementById("telefono").innerHTML = "Telefono: 04127078627";
+                document.getElementById("datosgenerales").innerHTML = "Datos Generales";
+                document.getElementById("fechanacimiento").innerHTML = "Fecha de Nacimiento: 22/09/2004";
+                document.getElementById("cedula").innerHTML = "Cédula: 30.589.661";
+                document.getElementById("email").innerHTML = "Correo electrónico: abgomez.ec@gmail.com";
+                document.getElementById("formacion").innerHTML = "Formación Académica";
+                document.getElementById("bachiller").innerHTML = "Bachiller: U.E.P. Colegio ''Emilio Crespo''";
+                document.getElementById("ingenieria").innerHTML = "Ingeniería en Informática: Actualmente cursando 4to semestre en la Universidad Nacional Experimental de los Llanos Centrales ''Rómulo Gallegos''";
+                document.getElementById("experiencia").innerHTML = "Experiencia Laboral";
+                document.getElementById("exptexto").innerHTML = "Actualmente me encuentro en la búsqueda de mi primer experiencia laboral.";
+                document.getElementById("habilidades").innerHTML = "Habilidades y destrezas";
+                document.getElementById("gestion").innerHTML = "Gestión y organización";
+                document.getElementById("liderazgo").innerHTML = "Liderazgo";
+                document.getElementById("comunicacion").innerHTML = "Comunicación acertiva";
+                document.getElementById("resolucion").innerHTML = "Resolución de conflictos";
+                document.getElementById("objetivos").innerHTML = "Objetivos e intereses";
+                document.getElementById("textobjetivos").innerHTML = "Encontrar una empresa en la que pueda aprovechar mis habilidades personales, como la responsabilidad, versatilidad, inteligencia, y el deseo de aprender.<";
+                document.getElementById("boton").innerHTML = "Cambiar a Inglés";
+                EsEspanol = 1;
+            }
+        }
+    </script>
 </body>
 </html>
